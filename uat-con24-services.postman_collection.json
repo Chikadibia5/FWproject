@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "b84e5ea3-f99c-4f89-828b-17f303d0a996",
+		"name": "uat-con24-services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25899003",
+		"_collection_link": "https://universal-crater-486371.postman.co/workspace/My-Workspace~190320b6-61c0-4964-8104-224cd6f75551/collection/25899003-b84e5ea3-f99c-4f89-828b-17f303d0a996?action=share&source=collection_link&creator=25899003"
+	},
+	"item": [
+		{
+			"name": "q2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://196.11.150.234:8888/pancon24/q2",
+					"protocol": "http",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"q2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "echo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "196.11.150.234:8888/pancon24/echo/123456",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"echo",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cus-account-Inquiry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\": \"1234567890\",\r\n    \"acno\": \"3124720520\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://196.11.150.234:8888/pancon24/cus/v1/acenq",
+					"protocol": "http",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"cus",
+						"v1",
+						"acenq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cuswal2ac",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"jheader\": {\r\n\t\t\"requesttype\": \"TRANSAC\",\r\n\t\t\"nanotime\": \"207172625938800\",\r\n\t\t\"channel\": \"MOBILE\",\r\n\t\t\"userid\": \"2348123805597\",\r\n\t\t\"flowid\": \"1693592017487\",\r\n\t\t\"version\": \"3.0\"\r\n\t},\r\n\t\"jbody\": {\r\n\t\t\"exttxnrefno\": \"123456789012\",\r\n\t\t\"servicecode\": \"CUSWAL2OWNAC\",\r\n\t\t\"txnrefno\": \"1693592017799\",\r\n\t\t\"txnamount\": \"1000\",\r\n\t\t\"curreny\": \"NAIRA\",\r\n\t\t\"narration\": \"narration\",\r\n\t\t\"txnnano\": \"207172625953500\",\r\n\t\t\"txntype\": \"C\",\r\n\t\t\"txnexactcode\": \"800002\",\r\n\t\t\"coreinfo\": {\r\n\t\t\t\"txndata\": [{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48933104000101\",\r\n\t\t\t\t\"txnamt\": \"10\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"drcr\": \"D\",\r\n\t\t\t\t\"acno\": \"48955190000101\",\r\n\t\t\t\t\"txnamt\": \"5\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"3124720520\",\r\n\t\t\t\t\"txnamt\": \"5\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48934389034901\",\r\n\t\t\t\t\"txnamt\": \"10\"\r\n\t\t\t}],\r\n\t\t\t\"cramt\": \"980\",\r\n\t\t\t\"coretxnrefno\": \"102938475610\",\r\n            \"coretxnnarration\": \"Transactions\",\r\n\t\t\t\"dramt\": \"1000\",\r\n\t\t\t\"drac\": \"08066471217\",\r\n\t\t\t\"crac\": \"2003258136\"\r\n\t\t},\r\n\t\t\"craccount\": \"7123469420\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://196.11.150.234:8888/pancon24/cus/v1/wal2ac",
+					"protocol": "http",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"cus",
+						"v1",
+						"wal2ac"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cusac2wal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"jheader\": {\r\n\t\t\"requesttype\": \"TRANSAC\",\r\n\t\t\"nanotime\": \"207172625938800\",\r\n\t\t\"channel\": \"MOBILE\",\r\n\t\t\"userid\": \"2348123805597\",\r\n\t\t\"flowid\": \"1693592017487\",\r\n\t\t\"version\": \"3.0\"\r\n\t},\r\n\t\"jbody\": {\r\n\t\t\"exttxnrefno\": \"102938475611\",\r\n\t\t\"servicecode\": \"CUSAC2WAL\",\r\n\t\t\"txnrefno\": \"102938475611\",\r\n\t\t\"txnamount\": \"1000\",\r\n\t\t\"curreny\": \"NAIRA\",\r\n\t\t\"narration\": \"narration\",\r\n\t\t\"txnnano\": \"207172625953500\",\r\n\t\t\"txntype\": \"C\",\r\n\t\t\"txnexactcode\": \"800002\",\r\n\t\t\"coreinfo\": {\r\n\t\t\t\"cramt\": \"1000\",\r\n\t\t\t\"coretxnrefno\": \"102938475611\",\r\n            \"coretxnnarration\": \"Transactions\",\r\n\t\t\t\"dramt\": \"2013274713\",\r\n\t\t\t\"drac\": \"2038625424\",\r\n\t\t\t\"crac\": \"2016646280\"\r\n\t\t},\r\n\t\t\"craccount\": \"7123469420\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://196.11.150.234:8888/pancon24/cus/v1/wal2ac",
+					"protocol": "http",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"cus",
+						"v1",
+						"wal2ac"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cusdirectpost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"jheader\": {\r\n\t\t\"requesttype\": \"TRANSAC\",\r\n\t\t\"nanotime\": \"189702342890900\",\r\n\t\t\"channel\": \"USSD\",\r\n\t\t\"userid\": \"25140004-S0001\",\r\n\t\t\"flowid\": \"1694348320219\"\r\n\t},\r\n\t\"jbody\": {\r\n\t\t\"exttxnrefno\": \"123456789012\",\r\n\t\t\"servicecode\": \"AGNDIRPOST\",\r\n\t\t\"txnrefno\": \"1693592017490\",\r\n\t\t\"txnamount\": \"1000\",\r\n\t\t\"curreny\": \"NAIRA\",\r\n\t\t\"narration\": \"narration\",\r\n\t\t\"coreinfo\": {\r\n\t\t\t\"txndata\": [{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48933104000101\",\r\n\t\t\t\t\"txnamt\": \"1.1\"\r\n\t\t\t},\r\n{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48955190000101\",\r\n\t\t\t\t\"txnamt\": \"2.2\"\r\n\t\t\t},\r\n{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"32534389021701\",\r\n\t\t\t\t\"txnamt\": \"3.3\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"2013274713\",\r\n\t\t\t\t\"txnamt\": \"4.4\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48934389034901\",\r\n\t\t\t\t\"txnamt\": \"5.5\"\r\n\t\t\t}],\r\n\t\t\t\"cramt\": \"983.50\",\r\n\t\t\t\"coretxnrefno\": \"102938475610\",\r\n            \"coretxnnarration\": \"Transactions\",\r\n\t\t\t\"dramt\": \"1000\",\r\n\t\t\t\"drac\": \"2038625424\",\r\n\t\t\t\"crac\": \"2016646283\"\r\n\t\t}\r\n\t\t\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "196.11.150.234:8888/pancon24/cus/v1/cusdirectpost",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"cus",
+						"v1",
+						"cusdirectpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "custsqrepost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agn-account-Inquiry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\": \"1234567890222\",\r\n    \"acno\": \"48930402000401\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://196.11.150.234:8888/pancon24/agn/v1/acenq",
+					"protocol": "http",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"agn",
+						"v1",
+						"acenq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agnwal2ac",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"jheader\": {\r\n\t\t\"requesttype\": \"TRANSAC\",\r\n\t\t\"nanotime\": \"189702342890900\",\r\n\t\t\"channel\": \"USSD\",\r\n\t\t\"userid\": \"25140004-S0001\",\r\n\t\t\"flowid\": \"1694348320219\"\r\n\t},\r\n\t\"jbody\": {\r\n\t\t\"feeinfo\": {\r\n\t\t\t\"superagentac\": \"7040000094\",\r\n\t\t\t\"agent\": \"50\",\r\n\t\t\t\"bank\": \"25\",\r\n\t\t\t\"ceva\": \"20\",\r\n\t\t\t\"fee\": \"100\",\r\n\t\t\t\"superagent\": \"0\",\r\n\t\t\t\"subagent\": \"0\",\r\n\t\t\t\"vat\": \"5\",\r\n\t\t\t\"thirdparty\": \"0\"\r\n\t\t},\r\n\t\t\"exttxnrefno\": \"EXT123457\",\r\n\t\t\"solid\": \"123\",\r\n\t\t\"overridenarration\": \"ABR/MOB/COUT/714423052807231232/112514-S0001/deposit to account from wallet\",\r\n\t\t\"txnnano\": \"189702342914700\",\r\n\t\t\"crnarration\": \"cr narration\",\r\n\t\t\"txnexactcode\": \"000001\",\r\n\t\t\"draccount\": \"8771277533\",\r\n\t\t\"drnarration\": \"dr narration\",\r\n\t\t\"feenarration\": \"fee narration\",\r\n\t\t\"servicecode\": \"WALCASHDEP\",\r\n\t\t\"txnrefno\": \"1694348320999\",\r\n\t\t\"txnamount\": \"1000\",\r\n\t\t\"curreny\": \"NAIRA\",\r\n\t\t\"txntype\": \"C\",\r\n\t\t\"coreinfo\": {\r\n\t\t\t\"txndata\": [{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48933104000101\",\r\n\t\t\t\t\"txnamt\": \"1.1\"\r\n\t\t\t},\r\n{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48955190000101\",\r\n\t\t\t\t\"txnamt\": \"2.2\"\r\n\t\t\t},\r\n{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"32534389021701\",\r\n\t\t\t\t\"txnamt\": \"3.3\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"2013274713\",\r\n\t\t\t\t\"txnamt\": \"4.4\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48934389034901\",\r\n\t\t\t\t\"txnamt\": \"5.5\"\r\n\t\t\t}],\r\n\t\t\t\"cramt\": \"983.50\",\r\n\t\t\t\"coretxnrefno\": \"102938475610\",\r\n            \"coretxnnarration\": \"Transactions\",\r\n\t\t\t\"dramt\": \"1000\",\r\n\t\t\t\"drac\": \"2038625424\",\r\n\t\t\t\"crac\": \"2016646283\"\r\n\t\t}\r\n\t\t\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "196.11.150.234:8888/pancon24/agn/v1/wal2ac",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"agn",
+						"v1",
+						"wal2ac"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agnac2wal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"jheader\": {\r\n\t\t\"requesttype\": \"TRANSAC\",\r\n\t\t\"nanotime\": \"189702342890900\",\r\n\t\t\"channel\": \"USSD\",\r\n\t\t\"userid\": \"25140004-S0001\",\r\n\t\t\"flowid\": \"1694348320219\"\r\n\t},\r\n\t\"jbody\": {\r\n\t\t\"feeinfo\": {\r\n\t\t\t\"superagentac\": \"7040000094\",\r\n\t\t\t\"agent\": \"0\",\r\n\t\t\t\"bank\": \"0\",\r\n\t\t\t\"ceva\": \"0\",\r\n\t\t\t\"fee\": \"0\",\r\n\t\t\t\"superagent\": \"0\",\r\n\t\t\t\"subagent\": \"0\",\r\n\t\t\t\"vat\": \"0\",\r\n\t\t\t\"thirdparty\": \"0\"\r\n\t\t},\r\n\t\t\"exttxnrefno\": \"EXT123457\",\r\n\t\t\"solid\": \"123\",\r\n\t\t\"overridenarration\": \"ABR/MOB/COUT/714423052807231232/112514-S0001/deposit to account from wallet\",\r\n\t\t\"txnnano\": \"189702342914700\",\r\n\t\t\"crnarration\": \"cr narration\",\r\n\t\t\"txnexactcode\": \"000001\",\r\n\t\t\"craccount\": \"8771277533\",\r\n\t\t\"drnarration\": \"dr narration\",\r\n\t\t\"feenarration\": \"fee narration\",\r\n\t\t\"servicecode\": \"AGENTFUND\",\r\n\t\t\"txnrefno\": \"1694348320399\",\r\n\t\t\"txnamount\": \"1000\",\r\n\t\t\"curreny\": \"NAIRA\",\r\n\t\t\"txntype\": \"C\",\r\n\t\t\"coreinfo\": {\r\n\t\t\t\"cramt\": \"1000\",\r\n\t\t\t\"coretxnrefno\": \"102938475610\",\r\n            \"coretxnnarration\": \"Transactions\",\r\n\t\t\t\"dramt\": \"1000\",\r\n\t\t\t\"drac\": \"2038625424\",\r\n\t\t\t\"crac\": \"2016646283\"\r\n\t\t}\r\n\t\t\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "196.11.150.234:8888/pancon24/agn/v1/ac2wal",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"agn",
+						"v1",
+						"ac2wal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agndirectpost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"jheader\": {\r\n\t\t\"requesttype\": \"TRANSAC\",\r\n\t\t\"nanotime\": \"189702342890900\",\r\n\t\t\"channel\": \"USSD\",\r\n\t\t\"userid\": \"25140004-S0001\",\r\n\t\t\"flowid\": \"1694348320219\"\r\n\t},\r\n\t\"jbody\": {\r\n\t\t\"exttxnrefno\": \"123456789012\",\r\n\t\t\"servicecode\": \"AGNDIRPOST\",\r\n\t\t\"txnrefno\": \"1693592017490\",\r\n\t\t\"txnamount\": \"1000\",\r\n\t\t\"curreny\": \"NAIRA\",\r\n\t\t\"narration\": \"narration\",\r\n\t\t\"coreinfo\": {\r\n\t\t\t\"txndata\": [{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48933104000101\",\r\n\t\t\t\t\"txnamt\": \"1.1\"\r\n\t\t\t},\r\n{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48955190000101\",\r\n\t\t\t\t\"txnamt\": \"2.2\"\r\n\t\t\t},\r\n{\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"32534389021701\",\r\n\t\t\t\t\"txnamt\": \"3.3\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"2013274713\",\r\n\t\t\t\t\"txnamt\": \"4.4\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"drcr\": \"C\",\r\n\t\t\t\t\"acno\": \"48934389034901\",\r\n\t\t\t\t\"txnamt\": \"5.5\"\r\n\t\t\t}],\r\n\t\t\t\"cramt\": \"983.50\",\r\n\t\t\t\"coretxnrefno\": \"102938475610\",\r\n            \"coretxnnarration\": \"Transactions\",\r\n\t\t\t\"dramt\": \"1000\",\r\n\t\t\t\"drac\": \"2038625424\",\r\n\t\t\t\"crac\": \"2016646283\"\r\n\t\t}\r\n\t\t\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "196.11.150.234:8888/pancon24/agn/v1/agndirectpost",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"agn",
+						"v1",
+						"agndirectpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agntsqrepost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://196.11.150.234:8888/pancon24/agn/v1/tsqrepost/12345678901412",
+					"protocol": "http",
+					"host": [
+						"196",
+						"11",
+						"150",
+						"234"
+					],
+					"port": "8888",
+					"path": [
+						"pancon24",
+						"agn",
+						"v1",
+						"tsqrepost",
+						"12345678901412"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
